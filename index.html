@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>남해 숨쉼 독채 펜션 - 홈</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="남해 숨쉼 독채 펜션 - 홈" />
+  <meta property="og:description" content="아무에게도 방해받지 않는 휴식을 제공하는 남해 숨쉼 독채펜션입니다. 전 객실 독채객실로 프라이빗한 객실과 개별 테라스가 준비되어있습니다." />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/08/03/Jvs3j5WuTtVE.jpg" />
+  <meta property="og:url" content="https://xn--q20bx54ahhav38d.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="남해 숨쉼 독채 펜션 - 홈" />
+  <meta name="twitter:description" content="아무에게도 방해받지 않는 휴식을 제공하는 남해 숨쉼 독채펜션입니다. 전 객실 독채객실로 프라이빗한 객실과 개별 테라스가 준비되어있습니다." />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/08/03/Jvs3j5WuTtVE.jpg" />
+  <meta name="naver-site-verification" content="68a19a65ef869ced6c74f639c88b7f1d60ba1aa9" />
+  <meta name="google-site-verification" content="UptBIL21p7u9XOuZ9LtAcoCaPL3Nb8SZoR-OuPb3rxM" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <section id="content" class="main">
+          <!-- ── 히어로 ──────────────────────────────────────── -->
+          <div class="main_visual visual">
+            <div class="visual_box">
+              <div class="visual_txt">
+                <strong data-index-hero-title></strong>
+                <p data-index-hero-description></p>
+              </div>
+              <div class="visual_control">
+                <div class="swiper-arw swiper-button-prev">
+                  <img src="images/common/prev.png" alt="prev" />
+                </div>
+                <div class="swiper-arw swiper-button-next">
+                  <img src="images/common/next.png" alt="next" />
+                </div>
+              </div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper" data-index-hero-slides></div>
+              </div>
+            </div>
+          </div>
+          <!--// main_visual -->
+
+          <!-- ── 객실 미리보기 ───────────────────────────────── -->
+          <div class="main_room">
+            <div class="title_box inner">
+              <span>ROOMS PREVIEW</span>
+              <h3>객실 미리보기</h3>
+              <p data-index-room-description></p>
+            </div>
+            <div class="room_list">
+              <div class="arw">
+                <div class="swiper-button-prev">
+                  <img src="images/common/room_prev.png" alt="prev" />
+                </div>
+                <div class="swiper-button-next">
+                  <img src="images/common/room_next.png" alt="next" />
+                </div>
+              </div>
+              <div class="inner">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper" data-index-room-list></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--// main_room -->
+
+          <!-- ── 스페셜 포인트 ───────────────────────────────── -->
+          <div class="main_special inner" data-index-special-section>
+            <div class="title_box">
+              <span>SPECIAL POINTS</span>
+              <h3>스페셜 포인트</h3>
+              <p data-index-special-description></p>
+            </div>
+            <div class="special_list">
+              <div class="arw">
+                <div class="swiper-button-prev">
+                  <img src="images/common/room_prev.png" alt="prev" />
+                </div>
+                <div class="swiper-button-next">
+                  <img src="images/common/room_next.png" alt="next" />
+                </div>
+              </div>
+              <!-- 배경 장식용 필기체 문구. 두 원본이 동일한 고정 텍스트다. -->
+              <span class="ps_txt">Special Points</span>
+              <div class="swiper-container">
+                <div class="swiper-wrapper" data-index-special-list></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <!--// main_special -->
+
+          <!-- ── 예약 CTA 배너 ───────────────────────────────── -->
+          <div class="main_wide_bg" data-index-closing-bg>
+            <div class="txt_box">
+              <p data-index-closing-description></p>
+              <strong data-index-closing-title></strong>
+              <a href="#!" class="btn_reserve" target="_blank" data-booking-link>예약하기</a>
+            </div>
+          </div>
+          <!--// main_wide_bg -->
+
+          <!-- ── 숙소 둘러보기 ───────────────────────────────── -->
+          <div class="main_look inner" data-index-look-section>
+            <div class="title_box">
+              <span>LOOK AROUND</span>
+              <h3>숙소 둘러보기</h3>
+              <p data-index-look-description></p>
+            </div>
+            <!-- ⚠️ 원본 CSS 가 1번째 칸만 50%/600px 로 크게 두고 나머지를 25% 로
+                 깔기 때문에 이 그리드는 5칸 기준이다. 매퍼가 5장으로 자른다. -->
+            <ul data-index-look-list></ul>
+          </div>
+          <!--// main_look -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/index-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/index.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

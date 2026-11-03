@@ -1,0 +1,149 @@
+<header id="header" class="header">
+  <div class="hd_inner">
+    <!-- 원본은 .logo1(흰 로고) / .logo2(검정 로고) 두 장을 겹쳐 두고
+         `.header.on`(스크롤됨) 과 1023px 이하에서 CSS 로 갈아끼운다.
+         템플릿은 로고 파일을 고정 저장하지 않으므로 두 자리 모두
+         이미지 → 숙소명 텍스트 → placeholder 3단 폴백으로 채운다. -->
+    <div class="logo">
+      <a href="./index.html" class="logo1">
+        <img src="data:," alt="" data-logo-image />
+        <span class="logo_text tpl-slot" data-property-name-en></span>
+        <span class="logo_sub" data-property-name></span>
+      </a>
+      <a href="./index.html" class="logo2">
+        <img src="data:," alt="" data-logo-image />
+        <span class="logo_text tpl-slot" data-property-name-en></span>
+        <span class="logo_sub" data-property-name></span>
+      </a>
+    </div>
+
+    <div class="hd_lnb" id="hd_lnb">
+      <ul>
+        <li class="depth1">
+          <a href="./main.html" class="depth1_a"><span>ABOUT</span></a>
+          <!-- 원본 ABOUT 서브는 `카라반소개 / 외경보기 / 오시는길` 3개였다.
+               앞 둘은 main.html 하나로 병합했으므로 2개로 줄인다. -->
+          <ul class="depth_box">
+            <li><a href="./main.html">펜션소개</a></li>
+            <li><a href="./directions.html">오시는길</a></li>
+          </ul>
+        </li>
+        <li class="depth1">
+          <a href="./layout-map.html" class="depth1_a" data-rooms-link><span>ROOMS</span></a>
+          <ul class="depth_box" data-rooms-submenu>
+            <li><a href="./layout-map.html" data-menu-id="layout-map">미리보기</a></li>
+          </ul>
+        </li>
+        <li class="depth1" data-special-menu>
+          <a href="./facility.html" class="depth1_a"><span>SPECIAL</span></a>
+          <ul class="depth_box" data-special-submenu></ul>
+        </li>
+        <li class="depth1">
+          <a href="#!" class="depth1_a" target="_blank" data-booking-link><span>RESERVE</span></a>
+          <ul class="depth_box">
+            <li><a href="#!" target="_blank" data-booking-link>예약하기</a></li>
+            <li><a href="./reservation.html">이용안내</a></li>
+          </ul>
+        </li>
+        <li class="depth1" data-travel-menu>
+          <a href="./nearby-attractions.html" class="depth1_a"><span>TRAVEL</span></a>
+          <ul class="depth_box">
+            <li>
+              <a href="./nearby-attractions.html" data-menu-id="nearby-attractions">주변여행지</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--// hd_lnb -->
+
+    <div class="hd_right">
+      <!-- data-* 속성 : data-homepage-socialLinks-blog (homepage.socialLinks.blog)
+           원본(오리온풀빌라·아라뜰한옥펜션)의 네이버 N 로고 버튼. 원본 링크는 네이버 플레이스
+           주소이고 어드민 blog 칸에 넣어 쓴다. 값이 없으면 숨김 — 매핑 전 깜빡임이 없도록 기본 숨김 -->
+      <a
+        href="#!"
+        target="_blank"
+        rel="noopener"
+        class="hidden-social-link"
+        data-homepage-socialLinks-blog
+      >
+        <span class="for_t">
+          <img
+            src="images/n_logo.png"
+            alt="네이버"
+            style="width: 40px; height: 40px; margin-right: 10px"
+          />
+        </span>
+      </a>
+      <!-- data-* 속성 : data-homepage-socialLinks-instagram (homepage.socialLinks.instagram)
+           원본(J형 기준 사이트)에는 없는 버튼이라 바로 위 네이버 버튼과 같은 구조·크기(40px,
+           margin-right 10px)로 둔다. 값이 없으면 숨김 — 매핑 전 깜빡임이 없도록 기본 숨김 -->
+      <a
+        href="#!"
+        target="_blank"
+        rel="noopener"
+        class="hidden-social-link"
+        data-homepage-socialLinks-instagram
+      >
+        <span class="for_t">
+          <img
+            src="images/insta_logo.png"
+            alt="인스타그램"
+            style="width: 40px; height: 40px; margin-right: 10px"
+          />
+        </span>
+      </a>
+      <a href="#!" target="_blank" class="btn_reserve" data-booking-link>
+        <span class="for_t"><img src="images/common/reserv_icon.png" alt="실시간예약" /></span>
+        예약하기
+      </a>
+      <a href="#" class="btn_menu" aria-label="메뉴 열기">
+        <img src="images/common/b_nav.png" alt="" />
+      </a>
+    </div>
+  </div>
+  <!--// hd_inner -->
+
+  <div class="lnb_bg"></div>
+
+  <div class="aside">
+    <div class="aisde_inner">
+      <a href="#" class="btn_close" aria-label="닫기">
+        <img src="images/common/close.png" alt="" />
+      </a>
+      <div class="aside_box">
+        <div class="box">
+          <div class="depth1">ABOUT</div>
+          <ul class="depth_list">
+            <li><a href="./main.html">펜션소개</a></li>
+            <li><a href="./directions.html">오시는길</a></li>
+          </ul>
+
+          <div class="depth1">ROOMS</div>
+          <ul class="depth_list" data-rooms-submenu>
+            <li><a href="./layout-map.html" data-menu-id="layout-map">미리보기</a></li>
+          </ul>
+
+          <div class="depth1" data-special-menu>SPECIAL</div>
+          <ul class="depth_list" data-special-menu data-special-submenu></ul>
+
+          <div class="depth1">RESERVE</div>
+          <ul class="depth_list">
+            <li><a href="#!" target="_blank" data-booking-link>예약하기</a></li>
+            <li><a href="./reservation.html">이용안내</a></li>
+          </ul>
+
+          <div class="depth1" data-travel-menu>TRAVEL</div>
+          <ul class="depth_list" data-travel-menu>
+            <li>
+              <a href="./nearby-attractions.html" data-menu-id="nearby-attractions">주변여행지</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// aside -->
+  <div class="aside_bg"></div>
+</header>

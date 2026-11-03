@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>남해 숨쉼 독채 펜션 - 숙소소개</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="남해 숨쉼 독채 펜션 - 숙소소개" />
+  <meta property="og:description" content="아무에게도 방해받지 않는 휴식을 제공하는 남해 숨쉼 독채펜션입니다. 전 객실 독채객실로 프라이빗한 객실과 개별 테라스가 준비되어있습니다." />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/08/03/Jvs3j5WuTtVE.jpg" />
+  <meta property="og:url" content="https://xn--q20bx54ahhav38d.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="남해 숨쉼 독채 펜션 - 숙소소개" />
+  <meta name="twitter:description" content="아무에게도 방해받지 않는 휴식을 제공하는 남해 숨쉼 독채펜션입니다. 전 객실 독채객실로 프라이빗한 객실과 개별 테라스가 준비되어있습니다." />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/08/03/Jvs3j5WuTtVE.jpg" />
+  <meta name="naver-site-verification" content="68a19a65ef869ced6c74f639c88b7f1d60ba1aa9" />
+  <meta name="google-site-verification" content="UptBIL21p7u9XOuZ9LtAcoCaPL3Nb8SZoR-OuPb3rxM" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <!-- 원본 `about.html`(펜션소개) + `view.html`(외경보기) 두 페이지를 하나로 병합했다.
+             원본 클래스 `sub1_1 sub_about` 을 그대로 쓴다. -->
+        <section id="content" class="sub1_1 sub_about">
+          <!-- ── 히어로 ──────────────────────────────────────
+               원본 view.html(외경보기) 의 `.main_visual.visual` 을 그대로 가져왔다.
+               풀높이(100vh) 슬라이더로, 원본은 외경 사진 15장이 순서대로 돈다.
+               (view.html 에는 이 아래 구버전 `.sub_visual` 이 하나 더 있지만
+                두 원본 모두 주석 처리돼 있다. 가져오지 않는다)
+
+               ⚠️ 문구는 원본(`LANDSCAPE` / `{숙소명}의 외부전경을 소개합니다.`)을
+                  따르지 않는다. 이 페이지는 외경보기가 아니라 펜션소개로 병합된
+                  자리라 `ABOUT` + 숙소명을 쓴다. -->
+          <div class="main_visual visual">
+            <div class="visual_box">
+              <div class="txt_box">
+                <h3>ABOUT</h3>
+                <p data-main-visual-description></p>
+              </div>
+              <div class="visual_control">
+                <div class="swiper-arw swiper-button-prev">
+                  <img src="images/common/prev.png" alt="prev" />
+                </div>
+                <div class="swiper-arw swiper-button-next">
+                  <img src="images/common/next.png" alt="next" />
+                </div>
+              </div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper" data-main-hero-slides></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── 서브 탭 ─────────────────────────────────────
+               원본 탭은 `펜션소개 / 외경보기 / 오시는길` 3개였다.
+               앞 둘이 이 페이지로 합쳐졌으므로 2개로 줄인다. -->
+          <div class="sub_cate_wrap">
+            <div class="inner">
+              <ul>
+                <li class="on"><a href="./main.html">펜션소개</a></li>
+                <li><a href="./directions.html">오시는길</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sub_cont">
+            <div class="title_box inner">
+              <span>ABOUT</span>
+              <h3 data-main-hero-title></h3>
+              <p data-main-hero-description></p>
+            </div>
+
+            <!-- ── 소개 블록 ─────────────────────────────────
+                 `about[]` 블록 하나 = 큰 사진 1장 + 글(.about_top) + 작은 사진 3칸(.about_bnr).
+                 원본은 이 한 세트가 펜션소개 / 외경보기 페이지에 하나씩 있었고,
+                 두 세트의 CSS 가 좌우 반전 쌍이다(about_* = 사진 왼쪽 / view_* = 사진 오른쪽).
+                 블록 순서대로 두 벌을 번갈아 쓴다. -->
+            <div data-main-about-blocks></div>
+
+            <!-- ── 예약 CTA 배너 ─────────────────────────────
+                 배정할 customFields 블록이 남지 않는다. 문구는 두 원본이 완전히
+                 같은 고정 영문이라 하드코딩하고, 배경만 숙소 외경 사진을 쓴다. -->
+            <div class="main_wide_bg" data-main-closing-bg>
+              <div class="txt_box">
+                <p data-main-closing-description></p>
+                <strong>Make your Stay Even Better</strong>
+                <a href="#!" class="btn_reserve" target="_blank" data-booking-link>예약하기</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/main-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/main.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

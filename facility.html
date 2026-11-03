@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>남해 숨쉼 독채 펜션 - 시설안내</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="남해 숨쉼 독채 펜션 - 시설안내" />
+  <meta property="og:description" content="아무에게도 방해받지 않는 휴식을 제공하는 남해 숨쉼 독채펜션입니다. 전 객실 독채객실로 프라이빗한 객실과 개별 테라스가 준비되어있습니다." />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/08/03/Jvs3j5WuTtVE.jpg" />
+  <meta property="og:url" content="https://xn--q20bx54ahhav38d.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="남해 숨쉼 독채 펜션 - 시설안내" />
+  <meta name="twitter:description" content="아무에게도 방해받지 않는 휴식을 제공하는 남해 숨쉼 독채펜션입니다. 전 객실 독채객실로 프라이빗한 객실과 개별 테라스가 준비되어있습니다." />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/08/03/Jvs3j5WuTtVE.jpg" />
+  <meta name="naver-site-verification" content="68a19a65ef869ced6c74f639c88b7f1d60ba1aa9" />
+  <meta name="google-site-verification" content="UptBIL21p7u9XOuZ9LtAcoCaPL3Nb8SZoR-OuPb3rxM" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <!-- 원본 `special1~9.html` 을 `facility.html?id=` 한 파일로 합쳤다.
+             9개 페이지의 골격이 한 줄도 다르지 않다.
+             원본 클래스 `sub3_1 sub_special` 을 그대로 쓴다. -->
+        <section id="content" class="sub3_1 sub_special">
+          <!-- ── 히어로 ──────────────────────────────────────
+               index / main / room 과 같은 풀높이 `.main_visual.visual` 슬라이더다.
+               ⚠️ 원본 special 에는 .txt_box 가 없다 — 시설명은 아래 .title_box 가 받는다. -->
+          <div class="main_visual visual">
+            <div class="visual_box">
+              <div class="visual_control">
+                <div class="swiper-arw swiper-button-prev">
+                  <img src="images/common/prev.png" alt="prev" />
+                </div>
+                <div class="swiper-arw swiper-button-next">
+                  <img src="images/common/next.png" alt="next" />
+                </div>
+              </div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper" data-facility-hero-slides></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── 시설 탭 ─────────────────────────────────────
+               property.facilities[] 를 displayOrder 순으로 나열한다.
+               헤더 SPECIAL 서브메뉴 / index 카드와 같은 순서다. -->
+          <div class="sub_cate_wrap">
+            <div class="inner">
+              <ul data-facility-nav></ul>
+            </div>
+          </div>
+
+          <div class="sub_cont inner">
+            <div class="title_box">
+              <span>SPECIAL</span>
+              <h3 data-facility-name></h3>
+              <p data-facility-caption></p>
+            </div>
+
+            <!-- ── 소개 ──────────────────────────────────────
+                 사진 1장(오른쪽) + 소개문(왼쪽). 뒤에 테두리 판이 깔린다. -->
+            <div class="special_top">
+              <div class="img" data-facility-image></div>
+              <div class="txt">
+                <div class="sp_detail" data-facility-description></div>
+              </div>
+            </div>
+
+            <!-- ── 하단 사진 ─────────────────────────────────
+                 ⚠️ 원본 CSS 가 `li {width:49%}` + `li+li {margin-left:2%}` 로
+                    2칸을 전제한다. 두 원본의 special 9 / 5 페이지 전부 2장이다.
+                    매퍼가 위 소개 사진 다음 장부터 2장을 채운다. -->
+            <ul class="special_btm" data-facility-bottom-images></ul>
+          </div>
+          <!--// sub_cont -->
+
+          <!-- 원본의 `.special_info`(기본정보 / 유의사항 dl) 는 두 원본의 special
+               페이지 14개 전부에서 주석 처리돼 있다. 가져오지 않는다.
+               facilities[].usageGuide 는 위 소개문 아래에 이어 붙인다. -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/facility-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/facility.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

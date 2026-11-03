@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>남해 숨쉼 독채 펜션 - 객실안내</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="남해 숨쉼 독채 펜션 - 객실안내" />
+  <meta property="og:description" content="아무에게도 방해받지 않는 휴식을 제공하는 남해 숨쉼 독채펜션입니다. 전 객실 독채객실로 프라이빗한 객실과 개별 테라스가 준비되어있습니다." />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/08/03/Jvs3j5WuTtVE.jpg" />
+  <meta property="og:url" content="https://xn--q20bx54ahhav38d.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="남해 숨쉼 독채 펜션 - 객실안내" />
+  <meta name="twitter:description" content="아무에게도 방해받지 않는 휴식을 제공하는 남해 숨쉼 독채펜션입니다. 전 객실 독채객실로 프라이빗한 객실과 개별 테라스가 준비되어있습니다." />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/08/03/Jvs3j5WuTtVE.jpg" />
+  <meta name="naver-site-verification" content="68a19a65ef869ced6c74f639c88b7f1d60ba1aa9" />
+  <meta name="google-site-verification" content="UptBIL21p7u9XOuZ9LtAcoCaPL3Nb8SZoR-OuPb3rxM" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <!-- 원본 `room.html?room_id=`(객실 상세).
+             원본 클래스 `sub2_2 sub_room sub_room_detail` 을 그대로 쓴다. -->
+        <section id="content" class="sub2_2 sub_room sub_room_detail">
+          <!-- ── 히어로 ──────────────────────────────────────
+               index / main 과 같은 풀높이 `.main_visual.visual` 슬라이더다.
+               ⚠️ 원본 객실 상세에는 .txt_box 가 없다 — 객실명은 아래 .room_title 이 받는다. -->
+          <div class="main_visual visual">
+            <div class="visual_box">
+              <div class="visual_control">
+                <div class="swiper-arw swiper-button-prev">
+                  <img src="images/common/prev.png" alt="prev" />
+                </div>
+                <div class="swiper-arw swiper-button-next">
+                  <img src="images/common/next.png" alt="next" />
+                </div>
+              </div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper" data-room-hero-slides></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── 객실 탭 ─────────────────────────────────────
+               ⚠️ 원본은 이 페이지에서만 `.inner` 가 아니라 `.sub_inner` 를 쓴다
+                  (`.sub_inner` 는 CSS 가 없어 폭 제한이 걸리지 않는다).
+                  객실이 많은 숙소에서 탭이 넓게 퍼지라고 둔 것이라 그대로 둔다.
+
+               그룹이 있는 객실 안에 들어오면 매퍼가 **그 그룹의 객실만** 펼친다.
+               그룹 밖이면 헤더 메뉴와 같은 접힌 목록이다. -->
+          <div class="sub_cate_wrap">
+            <div class="sub_inner">
+              <ul data-room-nav>
+                <li><a href="./layout-map.html">미리보기</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sub_cont">
+            <div class="room_title">
+              <dl class="inner">
+                <div class="box">
+                  <h4 data-room-name></h4>
+                  <p data-room-structure></p>
+                </div>
+                <ul class="notice_li" data-room-notice></ul>
+                <div class="btn_wrap">
+                  <a href="#!" class="btn_reserve" target="_blank" data-booking-link>예약하기</a>
+                </div>
+              </dl>
+            </div>
+
+            <!-- ── 객실 정보 표 ──────────────────────────────
+                 원본은 PC 용 / 모바일 용 표를 따로 두고 `.for_pc` / `.for_m` 로
+                 갈아끼운다. 열 구성이 달라 하나로 합칠 수 없다. -->
+            <div class="table_box inner">
+              <div class="price_table for_pc">
+                <table cellspacing="0" cellpadding="0" class="table_default">
+                  <thead>
+                    <tr>
+                      <th style="width: 20%">객실명</th>
+                      <th style="width: 5%">기준</th>
+                      <th style="width: 5%">최대</th>
+                      <th style="width: 15%">유형</th>
+                      <th style="width: 15%">평형</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-room-name></td>
+                      <td data-room-base-occupancy></td>
+                      <td data-room-max-occupancy></td>
+                      <td data-room-structure></td>
+                      <td data-room-size></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <ul class="table_text" data-room-amenities></ul>
+              </div>
+              <div class="price_table for_m">
+                <table class="table_default">
+                  <thead>
+                    <tr>
+                      <th colspan="4">객실명</th>
+                      <th>기준</th>
+                      <th>최대</th>
+                      <th colspan="4">유형</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="4"><span data-room-name></span></td>
+                      <td data-room-base-occupancy></td>
+                      <td data-room-max-occupancy></td>
+                      <td colspan="4" data-room-structure></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <ul class="table_text" data-room-amenities></ul>
+              </div>
+            </div>
+
+            <!-- ── 객실 사진 ─────────────────────────────────
+                 원본은 `ul(2칸) + div(1칸) + ul(3칸)` 6장 한 덩어리다.
+                 CSS 가 `ul:nth-of-type(1)` / `(2)` 로 칸 크기를 나누므로
+                 사진이 6장을 넘으면 매퍼가 이 블록을 통째로 하나 더 만든다. -->
+            <div data-room-detail-images></div>
+
+            <!-- ── 객실 평면도 ───────────────────────────────
+                 이미지 카테고리 `floor_plan` 에 값이 있을 때만 노출한다.
+                 없으면 제목까지 영역째 숨긴다 — 일반 객실 사진으로 폴백하지 않는다.
+                 (평면도 자리에 인테리어 사진이 들어가면 잘못된 정보다) -->
+            <div class="room_title" data-room-floorplan>
+              <dl class="inner">
+                <div class="box_1">
+                  <h4>객실 평면도</h4>
+                </div>
+                <div class="box sub_inner" data-room-floorplan-images></div>
+              </dl>
+            </div>
+
+            <!-- ── 객실 미리보기 ─────────────────────────────
+                 index / layout-map 과 같은 카드 슬라이더다. -->
+            <div class="main_room">
+              <div class="title_box inner">
+                <span>ROOMS PREVIEW</span>
+                <h3>객실 미리보기</h3>
+                <p data-room-list-description></p>
+              </div>
+              <div class="room_list">
+                <div class="arw">
+                  <div class="swiper-button-prev">
+                    <img src="images/common/room_prev.png" alt="prev" />
+                  </div>
+                  <div class="swiper-button-next">
+                    <img src="images/common/room_next.png" alt="next" />
+                  </div>
+                </div>
+                <div class="inner">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper" data-room-list-slides></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--// sub_cont -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/room-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/room.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

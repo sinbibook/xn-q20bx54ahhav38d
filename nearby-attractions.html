@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>남해 숨쉼 독채 펜션</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="남해 숨쉼 독채 펜션" />
+  <meta property="og:description" content="아무에게도 방해받지 않는 휴식을 제공하는 남해 숨쉼 독채펜션입니다. 전 객실 독채객실로 프라이빗한 객실과 개별 테라스가 준비되어있습니다." />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/08/03/Jvs3j5WuTtVE.jpg" />
+  <meta property="og:url" content="https://xn--q20bx54ahhav38d.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="남해 숨쉼 독채 펜션" />
+  <meta name="twitter:description" content="아무에게도 방해받지 않는 휴식을 제공하는 남해 숨쉼 독채펜션입니다. 전 객실 독채객실로 프라이빗한 객실과 개별 테라스가 준비되어있습니다." />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/08/03/Jvs3j5WuTtVE.jpg" />
+  <meta name="naver-site-verification" content="68a19a65ef869ced6c74f639c88b7f1d60ba1aa9" />
+  <meta name="google-site-verification" content="UptBIL21p7u9XOuZ9LtAcoCaPL3Nb8SZoR-OuPb3rxM" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <!-- 원본 `travel.html`. 원본 클래스 `sub5_1 sub_travel` 을 그대로 쓴다. -->
+        <section id="content" class="sub5_1 sub_travel">
+          <!-- ── 히어로 ──────────────────────────────────────
+               원본이 `.sub_visual`(500px 단일 배경)이다. 슬라이더가 아니다. -->
+          <div class="sub_visual" data-nearby-hero>
+            <div class="txt_box">
+              <h3>TRAVEL</h3>
+              <p data-nearby-visual-description></p>
+            </div>
+          </div>
+
+          <!-- 원본 탭은 이 페이지 하나뿐이다(`주변여행지`). 그대로 둔다. -->
+          <div class="sub_cate_wrap">
+            <div class="inner">
+              <ul>
+                <li class="on"><a href="./nearby-attractions.html">주변여행지</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sub_cont inner">
+            <div class="title_box">
+              <span>TRAVEL</span>
+              <h3 data-nearby-title></h3>
+              <p data-nearby-description></p>
+            </div>
+
+            <!-- ── 여행지 목록 ───────────────────────────────
+                 원본 li 는 `.img > img` + `.txt > strong + p` 구조다.
+                 홀수/짝수 li 의 사진 위치가 좌우로 교차한다(원본 CSS). -->
+            <div class="travel_list">
+              <ul data-nearby-list></ul>
+            </div>
+          </div>
+          <!--// sub_cont -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/nearby-attractions-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

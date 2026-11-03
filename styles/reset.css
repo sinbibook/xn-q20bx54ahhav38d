@@ -1,0 +1,280 @@
+@import url('//fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('//fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+/* font-family: 'Noto Serif KR', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* font-family: 'Noto Sans KR'; */
+/* ⚠️ **Noto Sans KR 은 CSS2 엔드포인트로 싣는다.**
+   기존에는 `//fonts.gstatic.com/ea/notosanskr/v2/...`(구글 early-access)에서
+   여러 weight 를 @font-face 로 불러왔는데, **그 서비스는 종료돼 전부 404 + CORS 차단**이다.
+   전 페이지에서 콘솔 에러가 쏟아지고 본문이 시스템 폰트로 떨어진다.
+   현행 CSS2 가변축 한 줄로 대체한다(100~900 전 weight 커버). */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color: #333;
+  font-family: var(--font-ko-sub), 'Malgun Gothic', '맑은 고딕', dotum, sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+div,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+fieldset,
+input,
+textarea,
+button,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+iframe,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+img {
+  border: 0 none;
+  vertical-align: middle;
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+button {
+  background: transparent;
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0;
+}
+button,
+input[type='submit'],
+input[type='button'] {
+  background: transparent;
+  cursor: pointer;
+  *overflow: visible;
+}
+button span {
+  display: none;
+}
+input,
+button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-style: normal;
+}
+
+/* table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+th {
+  vertical-align: middle;
+}
+th,
+td {
+  border-collapse: collapse;
+}
+legend,
+hr {
+  display: none;
+}
+caption {
+  text-indent: -9999em;
+  overflow: hidden;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* form */
+form {
+  display: inline;
+}
+select,
+input,
+textarea {
+  color: #666;
+  font-family: var(--font-ko-sub), 'Malgun Gothic', '맑은 고딕', dotum, sans-serif;
+  font-size: inherit;
+  vertical-align: middle;
+}
+fieldset,
+blockquote,
+iframe,
+button {
+  border: none;
+}
+
+/* font */
+i,
+em,
+u,
+cite {
+  font-style: normal;
+}
+em {
+  font-weight: bold;
+}
+
+/* link */
+a {
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:visited {
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}

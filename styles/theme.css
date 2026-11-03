@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* Theme CSS — t-template-J  (정본 gyeongjucaravan.co.kr / 대조 개울가풀빌라.kr)
+   standalone 은 이 값을 그대로 쓰고, 백오피스 preview 는 theme customFields 로
+   덮어쓴다 (주입: js/preview-handler.js).
+   토큰 값은 하나씩만 둔다 — 폴백은 사용처에서 붙인다.
+   사용처 전수 조사와 하드코딩으로 남긴 값은 data-mapping.md 「테마 색상/폰트」 참고. */
+
+/* 웹폰트 로딩.
+   원본은 디스플레이 서체 @font-face 를 reset.css 와 style.css 에 **중복 선언**했다.
+   여기 한 곳으로 모으고 양쪽에서는 지웠다.
+
+   - SDSamliphopangche_Basic → 정본(용천수)의 디스플레이 서체. --font-ko-main / --font-en-main
+   - GangwonEdu_OTFBoldA     → 대조본(개울가)의 한글 디스플레이. 토큰만 갈아끼우면 되도록 함께 로드한다
+   - Playfair Display        → 대조본(개울가)의 영문 라벨 서체. reset.css 가 이미 @import 하고 있다
+   - Noto Sans KR            → **reset.css 의 @font-face 를 그대로 둔다.** css2 쪽은 가변폰트라
+                               자간·굵기가 미세하게 달라져 원본 화면이 틀어진다. */
+@font-face {
+  font-family: 'SDSamliphopangche_Basic';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Basic.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GangwonEdu_OTFBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* 푸터 색면 1곳 — `#footer` 배경.
+     이 템플릿에서 브랜드색 다음으로 큰 색면이다.
+     ⚠️ 밝은 색으로 바꾸면 푸터 위의 흰 글자가 사라진다. */
+  --color-primary: #192333;
+
+  /* 브랜드 포인트 27곳. 두 원본이 갈리는 유일한 색 축 (개울가는 #b2874e)
+     헤더 메뉴 hover·예약버튼 8 / 푸터 정책링크 1 / .btn_more 4 / .title_box span 1 /
+     객실 카드 4 / 스페셜 2 / 배너·예약 버튼 3 / dt:before 막대 4곳.
+     ⚠️ 밝은 색으로 바꾸면 .btn_more 등 이 색을 배경으로 깐 면 위의 흰 글자가 사라진다. */
+  --color-secondary: #59812a;
+
+  /* 한글 대제목 2곳 — .title_box h3(섹션 제목) / .visual .visual_txt strong(index 히어로 숙소명)
+     업주가 입력한 한글이 그대로 들어가는 자리다. (개울가는 GangwonEdu_OTFBoldA)
+     사용처는 var(--font-ko-main), 'Noto Sans KR', sans-serif 로 폴백을 붙인다. */
+  --font-ko-main: 'SDSamliphopangche_Basic';
+
+  /* 한글 본문 — reset.css 전역(본문·폼) + .ff_notokr */
+  --font-ko-sub: 'Noto Sans KR';
+
+  /* 영문 라벨 2곳 — .main_visual .visual_box .txt_box h3 / .sub_visual .txt_box h3
+     `ABOUT` `LOCATION` `RESERVATION` `TRAVEL` `SPECIAL` 처럼 영문 대문자만 들어간다.
+     정본은 한글 디스플레이와 같은 서체를 썼지만 개울가는 여기만 Playfair Display 다. */
+  --font-en-main: 'SDSamliphopangche_Basic';
+}
